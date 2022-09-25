@@ -91,6 +91,8 @@ main{
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  position: relative;
+
 }
 #textmain{
   padding-top: 150px;
@@ -99,9 +101,7 @@ main{
   text-shadow: black 3px 3px 3px;
   color:rgb(255, 255, 255);
   font: oblique normal 2.5em var(--fonttema3);
-
   line-height: 1.5em;
-
 }
 
 main h1{
@@ -114,7 +114,6 @@ main h1{
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  
 }
 
 .divisor svg {
@@ -125,8 +124,7 @@ main h1{
 }
 
 .divisor .shape-fill {
-  fill:black;
-
+  fill: #B3B3B3;
  
 }
 #benconteiner{
@@ -195,6 +193,7 @@ border-radius: 12px;
 box-shadow: rgba(0, 0, 0, 0.445)  3px 3px 3px 3px; 
 margin-left: 30px;
 }
+
 #contacto:active{
   background-color: #707891;
 }
@@ -206,17 +205,18 @@ margin-left: 30px;
 #serviço{
   height: 300vh;
   display: grid;
-  background-image: url(img/backser.png);
   align-content: flex-start;
   padding-top: 60px;
   color: white;
+  background-image: linear-gradient(to bottom,rgb(184, 184, 184),rgb(31, 30, 30)30%);
 }
 #serviço aside{
   display: flex;
+  height: 100vh;
   align-items: center;
-  padding-top:100px ;
 }
 #serviço h1{
+  margin-bottom: 50px;
   font-family: var(--fonttema) ;
   font-size: xxx-large;
   font-weight: bolder;
@@ -231,8 +231,8 @@ margin-left: 30px;
   margin-left: 40px;
 }
 #serviço img{
-  width: 500px;
-  height: 400px;
+  width: 60vw;
+  height: 90vh;
   border-radius: 20px;
   transform: skewY(-2.5deg);
 }
