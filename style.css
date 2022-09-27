@@ -92,7 +92,8 @@ main{
   background-position: center center;
   background-attachment: fixed;
   position: relative;
-
+  box-shadow: inset #000000a9 -2px -11px 20px 10px;
+ 
 }
 #textmain{
   padding-top: 150px;
@@ -215,25 +216,74 @@ margin-left: 30px;
   height: 100vh;
   align-items: center;
 }
+
 #serviço h1{
+  margin-top: 50px;
   margin-bottom: 50px;
   font-family: var(--fonttema) ;
   font-size: xxx-large;
   font-weight: bolder;
   text-align: center;
   text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+  
+}
+#serviço h2{
+  display: inline-block;
+  background-color: yellowgreen;
+  border-radius: 20px;
+  padding: 0 25px;
+  transform: rotate(-10deg);
+
+}
+#serviço p{
+  margin-top: 40px;
+  padding: 5px;
+  display:inline-block;
+  visibility: hidden;
+  width: 0px;
+  border-radius: 10px;
+  background-color:rgb(129, 129, 250) ;
+  transition: width 2s;
+  text-align: center;
 }
 #serviço div{
+  display: grid;
   font-size: xx-large;
   font-family: var(--fontbody2);
   text-align: end;
   margin-right: 20px;
   margin-left: 40px;
 }
+#serviço aside:hover p{
+  width: 300px;
+
+  visibility: visible;
+}
+
 .imgs{
   width: 60vw;
   height: 90vh;
-  transform: skewY(-1.5deg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#as1 .imgs{
+  -webkit-mask-image: url(img/tinta.png);
+  mask-image: url(img/tinta.png);
+  background-image: url(img/main9.jpg);
+}
+#as2 .imgs{ 
+  -webkit-mask-image: url(img/tinta2.png);
+  mask-image: url(img/tinta2.png);
+  background-image: url(img/server3.png);
+  }
+#as3 .imgs{
+  -webkit-mask-image: url(img/tinta3.png);
+  mask-image: url(img/tinta3.png);
+  background-image: url(img/main5.jpg);
+  background-position: center center;
 }
 #serviço img{
   border-radius: 20px;
