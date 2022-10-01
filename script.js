@@ -1,4 +1,4 @@
-let works = document.getElementById("works");
+let works = document.getElementById("as");
 let num= document.querySelectorAll('.num');
 let obv = new IntersectionObserver( entres =>{
     if(entres[0].isIntersecting===true){

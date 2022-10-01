@@ -293,23 +293,33 @@ margin-left: 30px;
 #works{
   background-image: linear-gradient(to top,rgb(136, 134, 134),rgb(31, 30, 30));;
   color: #FFFFFF;
-  height: 100vh;
+  height: 200vh;
 }
 #works h1{
+  font-family: var(--fonttema);
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.7em;
+  font-weight: bolder;
+  padding-bottom: 30px;
 }
 #works aside{
+  font-size: 1.7em;
+  font-weight: bold;
   text-align: center;
   display: grid;
   justify-content: center;
   grid-template-columns: 300px 300px;
+  grid-template-rows: 200px 200px;
+  
   gap: 15px;
-  border-radius: 5px;
+ 
 }
 
 #works .number{
   background-color: var(--color1);
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: inset rgba(71, 71, 71, 0.699) 3px 3px 3px 3px;
 }
 .num{
   color: greenyellow;
