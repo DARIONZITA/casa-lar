@@ -300,8 +300,19 @@ margin-left: 30px;
   font-size: 2.5em;
 }
 #works aside{
+  text-align: center;
   display: grid;
+  justify-content: center;
   grid-template-columns: 300px 300px;
+  gap: 15px;
+  border-radius: 5px;
+}
+
+#works .number{
+  background-color: var(--color1);
+}
+.num{
+  color: greenyellow;
 }
 
 footer{
