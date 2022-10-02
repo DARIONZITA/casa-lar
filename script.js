@@ -1,4 +1,6 @@
 let works = document.getElementById("as");
+let btns = document.querySelectorAll('.btnsd');
+let slide = document.getElementById('slide')
 let num= document.querySelectorAll('.num');
 let obv = new IntersectionObserver( entres =>{
     if(entres[0].isIntersecting===true){
@@ -26,5 +28,14 @@ let obv = new IntersectionObserver( entres =>{
       
     }
 },{threshold : [0.50]});
-obv.observe(works)
+obv.observe(works)  
+let a = [2,3,4,5,6,7,8,9,10,11,12]
+let b =['png','jpg']
+function slidef(n){ 
+    switch(n){
+        case 2:
+            slide.style.backgroundImage = `url('img/construções/c${a}.${b}')`;
+            break
+    }
+}
 
