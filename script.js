@@ -29,12 +29,21 @@ let obv = new IntersectionObserver( entres =>{
     }
 },{threshold : [0.50]});
 obv.observe(works)  
+let i = -1
 let a = [2,3,4,5,6,7,8,9,10,11,12]
 let b =['png','jpg']
 function slidef(n){ 
     switch(n){
         case 2:
-            slide.style.backgroundImage = `url('img/construções/c${a}.${b}')`;
+            if (i > 9){i=-1}
+            i++
+            slide.style.backgroundImage = `url('img/construções/c${a[i]}.${i < 2 ?b[0]:b[1]}')`;
+            break
+        case 0:
+            if (i < 1){i=11}
+            i--
+            slide.style.backgroundImage = `url('img/construções/c${a[i]}.${i < 2 ?b[0]:b[1]}')`;
+            
             break
     }
 }
