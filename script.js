@@ -1,5 +1,7 @@
 let works = document.getElementById("as");
 let btns = document.querySelectorAll('.btnsd');
+let deta = document.getElementById('deta')
+let summ = document.getElementById('summ')
 let slide = document.getElementById('slide')
 let num= document.querySelectorAll('.num');
 let obv = new IntersectionObserver( entres =>{
@@ -46,5 +48,7 @@ function slidef(n){
             
             break
     }
-}
 
+    deta.style.backGroundColor='white';
+    
+}
