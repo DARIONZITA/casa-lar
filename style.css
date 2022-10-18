@@ -524,9 +524,8 @@ footer a{
   transition: transform .5s;
  
 }
-#contcont{
-  
-}
+
+
 .ask{
   display: flex;
   background-color: var(--color1);
@@ -575,9 +574,13 @@ footer a{
   font-family: var(--fonttema1);
   text-shadow:1px 1px 1px black;
   padding: 50px;
+  grid-template-columns:50% auto;
+  justify-content: space-around;
+
   
 
 }
+
 #rodapé a{
   color: white;
   text-decoration: none;
@@ -613,6 +616,7 @@ form{
 fieldset{
   width: 300px;
   justify-self: start;
+  height: 450px;
 }
 #whats{
   height: 0px;
@@ -641,14 +645,29 @@ textarea{
   
   width: 30px;
 }
-
+@keyframes svgmov {
+  from{transform: translateY(-10px);}
+  to{transform: translateY(10px);}
+}
+#rodapé > img{
+ animation-name: svgmov;
+ animation-duration: 2s;
+ animation-direction: alternate;
+ animation-iteration-count:infinite ;
+ 
+}
 #rodcont{
   display:flex;
   justify-content: center;
+  grid-column: 1/3;
+  align-items: center;
 }
 #rodapé aside p{
   text-align: center;
-  padding-bottom: 2px;
+  padding-bottom:2px ;
+}
+#rodapé aside{
+  grid-column: 1/3;
 }
 @media screen and (max-width:1300px){
   #textmain{
@@ -830,4 +849,7 @@ textarea{
   #rodapé{
     padding: 0px;
   }
+  #rodapé > img{
+  display: none;
+}
 }
