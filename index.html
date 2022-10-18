@@ -15,12 +15,15 @@
       <img src="img/icon-2.png" alt="" />
       <p>Empresa de<br>construção civil</p>
     </section>
-    <nav>
+    <button id="menu" onclick="fmenu(0)"></button>
+     
+    <nav id="nav">
+      <button id="closemenu" onclick="fmenu(1)"></button>
      <a href="#inicio" >Início</a>
      <a href="#serviço">Serviços</a>
-     <a href="">Trabalhos</a>
-     <a href="">Sobre nós</a> 
-     <a href="">FQA</a>
+     <a href="#works">Trabalhos</a>
+     <a href="#whoare">Sobre nós</a> 
+     <a href="#fqa">FQA</a>
     </nav>
   </header>
   <main  id="inicio">
@@ -30,9 +33,11 @@
 
 <p>Te ajudamos a decidir tudo com o melhor custo-benefício. Conheça nossos serviços e descubra a praticidade de encontrar tudo que você precisa em um só lugar!</p>
 <p>Somos referencia quando se fala em solucionar o seu problema com rapidez e segurança.<p>
-  <button id="contacto"><a href="#">Contactar</a></button>
+  <button id="contacto"><a href="#rodapé">Contactar</a></button>
  </section>
-    <section id="benconteiner">
+ <section id="benconteiner">
+ 
+    <section id="cben">
       <aside class="ben" >
 
         <img src="img/rapido.png" alt="">
@@ -65,6 +70,7 @@
       </aside>
 
     </section>
+ </section>
  <div class="divisor">
   <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
@@ -111,9 +117,9 @@
         <button class="btnsd" id="btnf" onclick="slidef(1)"></button>
         <button class="btnsd" onclick="slidef(2)"></button>
       </div>
-    <details id="deta">
-      <summary id="summ">Ponte-Icobra</summary>
-      <P>Ponte feita em Luanda/Angola</P>
+    <details >
+      <summary id="summ">Casa Nz</summary>
+      <P id="deta">Coisas boas não se repetem</P>
     </details>
   </section>
     <aside id="as">
@@ -122,14 +128,164 @@
       <div class="number"><p class="num">+ 0</p><p>Obras</p></div>
       <div class="number"><p class="num">+ 0</p><p>ARTs</p></div>
     </aside>
+    <section id='contclient'>
+    <h1>Clientes Satisfeitos</h1>
+    <section id="clientes">
+      
+      <div class="cliente">
+      <div class="coment"><p>Muito obrigado por terem construído o meu Hospital com tamanha intensidade</p></div>
+     <aside >
+        <div class="foto"><img src="img/fotoperfil/cliente1.jpg" alt=""></div>
+        <div class="nome">
+          <p>Luiz Almeida</p>
+          <small class="nomdata">Doctor do hospital Morte-Bonita</small>
+        </div>
+     </aside>
+       </div>
+       <div class="cliente">
+      <div class="coment"><p>Altamente eficientes, a empresa Novo-Lar e empresa para se trabalhar toda a vida!!</p></div>
+     <aside >
+        <div class="foto"><img src="img/fotoperfil/cliente2.jpg" alt=""></div>
+        <div class="nome">
+          <p>Max Oliveira</p>
+          <small class="nomdata">Gestor Empresarial</small>
+        </div>
+     </aside>
+       </div>
+       <div class="cliente">
+      <div class="coment"><p>Melhor empresa de construção que eu já tive o prazer de trabalhar.São Profissionais</p>
+      <p>Muito obrigada!!</p>
+      </div>
+     <aside >
+        <div class="foto"><img src="img/fotoperfil/cliente3.jpg" alt=""></div>
+        <div class="nome">
+          <p>Larissa Campos</p>
+          <small class="nomdata">C.O da Empresa Giguna</small>
+        </div>
+     </aside>
+       </div>
+       <div class="cliente">
+      <div class="coment"><p>Ótimo trabalho!!</p>
+      <p>Foram Rápido, e eficaz, acabaram de construir a minha escola em poucos meses.
+      Altamente profissionais.</p></div>
+     <aside >
+        <div class="foto"><img src="img/fotoperfil/cliente4.jpg" alt="img/fotoperfil/cliente3.jpg"></div>
+        <div class="nome">
+          <p>Pedro Feitiço</p
+          <small class="nomdata">Direitor da Escola Jujutsu Kaisen</small>
+        </div>
+     </aside>
+       </div>
+    </section>
+    </section>
+  </section>
+  <section id="whoare">
+   <div><h1>Quem Somos Nós</h1></div>
+   <p id="aviso">Está empresa não existe, foi um criação de Dário Nzita para fins de aprendizado na construção de Sites.</p>
+    <aside>
+      
+      <p>O Novo-Lar começou em 2020, iniciamos fazendo Laudos Estruturais, Laudos de Vistoria Predial, Laudos de Marquises e Projetos Estruturais.</p>
+      
+      <p>Somos engenheiros com muita experiencia no mercado e nos destacamos por possuir equipamentos e tecnologias essenciais para inspeções e análises técnicas com excelência.</p>
+      
+      <p>Nossos profissionais são apaixonados pela engenharia e por trazer transformação e segurança para os nossos clientes.</p>
+      
+      <p>Todo Cliente atendido se transforma numa referência para a Empresa.</p>
+    </aside>
+
+  </section>
+  <section id="fqa">
     
-    <section id="clientes"></section>
+    <h1>Perguntas Frequentes</h1>
+    
+   <div id="contfqa">
+     <div id="contcont">
+    <aside class="cask">
+      <div class="ask">
+      <img src="img/closemenu.svg" alt="" class="imgask" >
+      <p>Onde estão Localizados?</p>
+      
+      </div>
+      <p class="answer">Em todo Globo Terrestre, logo logo estaremos em Marte.</p>
+      </aside>
+      
+    <aside class="cask">
+      <div class="ask">
+      <img src="img/closemenu.svg" alt=""  class="imgask">
+      <p>Fazem encomenda de Bolo?</p>
+      
+      </div>
+      <p class="answer">Sim, bolos de chocolate e bolos Angiospermicos.</p>
+      </aside>
+      
+    <aside class="cask">
+      <div class="ask">
+      <img src="img/closemenu.svg" alt="" class="imgask">
+      <p>Onde encontro a tabela de preços?</p>
+      
+     </div>
+      <p class="answer">Os preços não são fixos, depende de cada trabalho que nos é dado.</p>
+      </aside>
+    <aside class="cask">
+      <div class="ask">
+      <img src="img/closemenu.svg" alt="" class="imgask">
+      <p>Quais são as armas de fogo de vendem?</p>
+      </div>
+      <p class="answer">🤦, Empresa de construção não vende armas, mais conhecemos quem vende 👀.</p>
+
+      </aside>
+    <aside class="cask">
+      <div class="ask">
+        <img src="img/closemenu.svg" alt="" class="imgask">
+      <p>A empresa realmente existe?</p>
+      </div>
+     <p class="answer">Tão real quanto o Pai Natal, uma empresa fictícia.</p>
+      
+      </aside>
+   </div>
+   <div class="custom-shape-divider-bottom-1665862737">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+      </svg>
+    </div>
   </section>
   <article id="whats"></article>
   
-  <footer>
-    
+  <footer id="rodapé">
+    <section>
+      <h1>Novo-Lar</h1>
+      <fieldset>
+        <legend>Fale conosco</legend>
+      <form action="#">
+        <label for="name">Nome: <input type="text" id="name" placeholder="Dário Nzita"></label>
+       
+        <label for="email">E-mail:<input type="email" id="email" placeholder="Examplo@email.com"></label>
+        
+         <label for="tell">Telefone:<input type="tel" id="tell" placeholder="xxx-xxx-xxx"></label>
+         <br>
+         <textarea name="" id="" cols="30" rows="10"></textarea>
+  
+         <button type="submit">Enviar</button>
+        
+      </form>
+      </fieldset>
+    </section>
+     <a href="#whoare">Sobre nós</a>
+    <section id="rodcont">
+     
+      <a><img src="img/whatsapp.svg"  alt=""></a>
+      <a><img src="img/facebook.svg"  alt=""></a>
+      <a><img src="img/linkedin.svg"  alt=""></a>
+      <a><img src="img/github.svg"  alt=""></a>
+    </section>
+    <hr>
+    <aside>
+      <p>Copyright © - Dário Nzita(2022/2023)</p>
+    </aside>
+  
+   
   </footer>
+
   <script src="script.js"></script>
 </body>
 

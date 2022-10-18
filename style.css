@@ -3,8 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+
+
 :root{
   --color1:#899cc5;
   --color2:#ffffff;
@@ -12,7 +14,7 @@
   --color4:#b4b4b4;
   --fontbody:'Mukta', sans-serif;
   --fonttema:'Merriweather', serif;
-  --fontcoment:'Sacramento', cursive;
+  --fontcoment: 'Merienda', cursive;
   --fontbody2:'Lobster', cursive;
   --fonttema2:'Rampart One', cursive;
   --fonttema3:'Rubik Distressed', sans-serif;
@@ -27,13 +29,16 @@ html{
 }
 body{
   font-family: var(--fontbody);
+  position: relative;
+  overflow-x: hidden;
+ 
 }
 header{
   width: 98%;
   display:flex;
   justify-content: space-between;
   position: absolute;
-  z-index:1;
+  z-index:2;
 }
 header section{
   display: flex;
@@ -63,6 +68,9 @@ nav a {
   
   
   
+}
+header button{
+  display: none;
 }
 
 nav a:hover{
@@ -115,6 +123,7 @@ main h1{
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  z-index: 0;
 }
 
 .divisor svg {
@@ -129,17 +138,16 @@ main h1{
  
 }
 #benconteiner{
-  position: absolute; 
+  position: absolute;
   bottom:-10%;
   width: 95vw;
   display: flex;
   justify-content: flex-end;
   z-index: 1;
   
-
 }
 .ben{
-  display: grid;
+ display: grid;
   width: 200px;
   padding: 10px;
   border-radius: 8px;
@@ -148,6 +156,10 @@ main h1{
   box-shadow: rgba(0, 0, 0, 0.445)  3px 3px 3px 3px;
   color: white;
   transition:transform 2s;
+ 
+}
+#cben{
+  display: flex;
 }
 .ben img{
   justify-self: center;
@@ -229,7 +241,7 @@ margin-left: 30px;
 }
 #serviço h2{
   display: inline-block;
-  background-color: yellowgreen;
+  background-color:#53599A;
   border-radius: 20px;
   padding: 0 25px;
   transform: rotate(-10deg);
@@ -239,11 +251,11 @@ margin-left: 30px;
   margin-top: 40px;
   padding: 5px;
   display:inline-block;
+  border-radius: 10px;
+  background-color:#5C6B73 ;
+  transition: width 2s;
   visibility: hidden;
   width: 0px;
-  border-radius: 10px;
-  background-color:rgb(129, 129, 250) ;
-  transition: width 2s;
   text-align: center;
 }
 #serviço div{
@@ -253,10 +265,10 @@ margin-left: 30px;
   text-align: end;
   margin-right: 20px;
   margin-left: 40px;
+ 
 }
 #serviço aside:hover p{
   width: 300px;
-
   visibility: visible;
 }
 
@@ -293,9 +305,9 @@ margin-left: 30px;
 #works{
   display: grid;
   grid-template-columns: 50vw 50vw;
-  background-image: linear-gradient(to top,rgb(136, 134, 134),rgb(31, 30, 30));;
+  background-image: linear-gradient(to top,white 50%,rgb(31, 30, 30) 100%);
   color: #FFFFFF;
-  height: 200vh;
+  height: auto;
 }
 #works h1{
   grid-column: 1/3;
@@ -305,7 +317,7 @@ margin-left: 30px;
   font-weight: bolder;
   padding-bottom: 30px;
 }
-#works aside{
+#as{
   font-size: 1.7em;
   font-weight: bold;
   text-align: center;
@@ -314,9 +326,9 @@ margin-left: 30px;
   align-content: center;
   grid-template-columns: 300px 300px;
   grid-template-rows: 220px 220px;
-  
   gap: 15px;
- 
+
+
 }
 
 #works .number{
@@ -347,10 +359,15 @@ details{
 details p{
   color: white;
 }
-#clientes{
+#contclient{
+  position: relative;
   grid-column: 1/3;
-  background-color: #95a3c2;
-  height: 100vh;
+  background-color: #435058;
+  color: black;
+  height: 70vh;
+  color:white;
+  width: 100vw;
+ 
 }
 .num{
   font-size: 1.7em;
@@ -365,24 +382,452 @@ details p{
 }
 .btnsd{
   opacity: 50%;
-  visibility: hidden;
   border-radius: 50%;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height:20px;
   background-color: #00ffea;
 }
 .btnsd:active{
   opacity: 100%;
 }
 
-#slide:hover .btnsd{
-  visibility: visible;
-}
 #btnf{
   opacity: 100%;
 
 }
+#contclient h1{
+  font-size: 2.5em;
+  font-family: var(--fonttema);
+}
+.cliente .coment{
+  font-family: var(--fontcoment);
+  font-size: 1em;
+  text-indent: 0.5em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2.8em;
+  background-color: white;
+  border-radius: 3px;
+  border: solid black 1px;
+  width: 400px;
+  justify-self: center;
+  padding: 14px;
+  box-shadow:#00000060 3px 3px 3px 3px;
+  color: black;
+}
+#clientes{
+  display: flex;
+  position: absolute;
+  justify-content: start;
+  width:100vw;
+  top:30%;
+  overflow-x:auto;
+  
+}
 
-footer{
+
+.cliente{
+  position: relative;
+  display: grid;
+  justify-content: center;
+  padding: 0px 200px;
+}
+.cliente .foto img{
+  background: blue;
+  border-radius:50%;
+  width: 90px;
+  height: 90px;
+}
+.cliente .nome{
+  padding-top: 9px;
+  margin-left: 12px;
+  font-size: normal;
+  font-weight: bold;
+}
+.cliente aside{
+  display: flex;
+  justify-content:flex-start;
+}
+.cliente small{
+  font-weight: normal;
+}
+
+footer a{
+  color: black;
+}
+#whoare{
   height: 100vh;
+  background-image: url(img/somos1.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center right;
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  
+ 
+}
+#whoare h1{
+  display: inline-block;
+  font-family: var(--fonttema2);
+  text-align:center;
+  font-variant: small-caps;
+  border-left: 8px double #77B6EA;
+  color: white;
+
+}
+#whoare aside{
+  width: 80vw;
+  border-radius: 6px;
+  background-color: #00000077;
+ 
+}
+#whoare div{
+  text-align: center;
+  background-color: #00000093;
+}
+#aviso{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  background-color: #ffffff;
+}
+#whoare aside p{
+  font-family:var(--fontbody);
+  font-size: 1em;
+  text-indent: 1em;
+  font-weight:bolder;
+  line-height: 2em;
+  margin: 10px;
+  text-shadow: rgba(0, 0, 0, 0.575) 3px 3px 3px;
+
+}
+#fqa{
+  position: relative;
+  padding:50px;
+  padding-bottom: 150px;
+}
+#fqa h1{
+  text-align: center;
+  font-size:2em;
+  font-family:var(--fonttema2);
+  text-align: center;
+  
+}
+#contfqa {
+  height:100%;
+  width: inherit;
+  display:grid;
+  justify-content: center;
+  align-items:center;
+}
+.imgask{
+  transform: rotate(45deg);
+  transition: transform .5s;
+ 
+}
+#contcont{
+  
+}
+.ask{
+  display: flex;
+  background-color: var(--color1);
+  padding: 4px;
+  margin: 15px;
+  border-radius: 5px;
+}
+.ask > p{
+  align-self: center;
+  font-weight: bolder;
+  font-size: 1em;
+  width: 80vw;
+ 
+}
+.ask div{
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  
+}
+.cask{
+  display: grid;
+}
+.answer{
+  background-color: var(--color4);
+  padding: 10px;
+  width: 80vw;
+  margin-left: 20px;
+  border-radius: 12px;
+  text-align: center;
+  display: none;
+  font-weight: bold;
+}
+.cask:hover .answer{
+  display: inline-block;
+}
+.cask:hover .imgask{
+  transform: rotate(0deg);
+} 
+#rodapé{
+  display: grid;
+  position: relative;
+  height: auto;
+  color: white;
+  background-color:#363636;
+  font-family: var(--fonttema1);
+  text-shadow:1px 1px 1px black;
+  padding: 50px;
+  
+
+}
+#rodapé a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.custom-shape-divider-bottom-1665862737 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1665862737 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 86px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1665862737 .shape-fill {
+  fill: #363636;
+}
+footer > section{
+  display: grid;
+}
+form{
+  display: grid;
+}
+fieldset{
+  width: 300px;
+  justify-self: start;
+}
+#whats{
+  height: 0px;
+}
+label{
+  display: grid ;
+}
+input{
+  align-self: end;
+  background-color:white;
+  padding: 5px;
+  border-radius: 10px;
+}
+form button{
+  margin: 10px;
+  width: 100px;
+  height: 35px;
+  background-color: #63D471;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+textarea{
+  background-color: white;
+}
+#rodapé section img{
+  
+  width: 30px;
+}
+
+#rodcont{
+  display:flex;
+  justify-content: center;
+}
+#rodapé aside p{
+  text-align: center;
+  padding-bottom: 2px;
+}
+@media screen and (max-width:1300px){
+  #textmain{
+    font-size:1.8em;
+  }
+  #works #slide{
+    grid-column: 1/3;
+    
+  }
+  #as{
+    justify-self: center;
+    grid-column:1/3 ;
+    padding: 10px;
+  }
+  #whoare {
+    overflow-y: auto;
+  }
+  #whoare p{
+    font-size: .5em;
+
+  }
+  #whoare aside{
+    font-size: 1em;
+  }
+  #serviço h1{
+    width: 100vw;
+    font-size:2.5em ;
+  }
+  #serviço aside{
+    display: grid;
+    
+  }
+  #serviço .imgs{
+    width:100vw;
+   
+  }
+  #serviço div{
+    position: absolute;
+    z-index: 1;
+    opacity: 40%;
+    font-size: x-large;
+  }
+  #serviço aside:hover div{
+    opacity: 100%;
+  }
+
+}
+
+@media screen and (max-width:767px){
+    .custom-shape-divider-bottom-1665862737 svg {
+    width: calc(180% + 1.3px);
+    height: 154px;
+  }
+   #whoare aside{
+    font-size: .7em;
+    width: 100vw;
+  }
+  nav{
+    
+    position: fixed;
+    height:100vh;
+    display: none;
+    background-color: #435058;
+    top:-10px;
+    width: 60vw;
+    align-content: start;
+    text-align: center;
+  
+  }
+  nav a{
+  padding: 10px;
+  font-size: large;
+ 
+  }
+  
+
+  header section{
+    width: 50vw;
+    height: 50px;
+  }
+  header section img{
+    height: 60px;
+  }
+  #menu{
+    display: inline-block;
+    margin-right:12px;
+    width: 30px;
+    height: 30px;
+    background-image: url(img/menu.ico);
+    background-size: 100% 100%;
+    border-radius: 4px;
+    background-color: white;
+  }
+  #closemenu{
+    display: inline-block;
+    margin-right:12px;
+    width: 30px;
+    height: 30px;
+    background-image: url(img/closemenu.svg);
+    background-size: 100% 100%;
+    border-radius: 4px;
+    background-color: transparent;
+    justify-self: end;
+  }
+  header p{
+    margin-top:3px;
+  
+  }
+  main{
+    background-position:bottom left;
+ 
+  }
+  #textmain{
+    font-size: 1.1em;
+    margin-left: 12px;
+    padding-top: 120px;
+    width: 80vw;
+    text-indent: 5px;
+  }
+  main h1{
+    text-align: center;
+  }
+  #benconteiner{
+    width: 100vw;
+    max-height: 50vh;
+   overflow-x: auto;
+   justify-content: start;
+   background-color: #36363630;
+    
+ 
+  }
+ 
+  .ben{
+   max-height:25vh ;
+   margin-left: 50px;
+   width: 100px;
+   overflow-y: auto;
+   
+ 
+  }
+  .ben p{
+    display: none;
+ 
+  }
+  .ben:hover p{
+    display: inline;
+  }
+  #contacto{
+    padding: 6px;
+    font-size: .8em;
+  }
+ 
+  
+ 
+  
+  
+  #as{
+   padding-top: 20px;
+   padding-bottom: 20px;
+    width: 100vw;
+    grid-template-columns:49vw 49vw;
+    grid-template-rows: 130px 130px;
+    gap:7.5px;
+    
+  }
+  .num{
+    font-size: 1em;
+  }
+  .number{
+     padding: 5px;
+     font-size: .6em;
+  }
+
+  
+  fieldset{
+    justify-self: center;
+  
+  }
+  #rodapé{
+    padding: 0px;
+  }
 }
