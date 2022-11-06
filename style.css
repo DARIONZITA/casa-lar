@@ -27,10 +27,13 @@ html{
 *{
   margin: 0px;
 }
+html, body{
+  overflow-x: hidden;
+}
 body{
   font-family: var(--fontbody);
   position: relative;
-  overflow-x: hidden;
+ 
  
 }
 header{
