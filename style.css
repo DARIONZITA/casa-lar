@@ -5,13 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 
 :root{
   --color1:#899cc5;
   --color2:#ffffff;
   --color3:#363636;
   --color4:#b4b4b4;
+  --fontupdate:'Playfair Display', serif;
   --fontbody:'Mukta', sans-serif;
   --fonttema:'Merriweather', serif;
   --fontcoment: 'Merienda', cursive;
@@ -154,7 +155,7 @@ main h1{
   width: 200px;
   padding: 10px;
   border-radius: 8px;
-  background-color: #424242;
+  background-color: #01104288;
   margin: 15px;
   box-shadow: rgba(0, 0, 0, 0.445)  3px 3px 3px 3px;
   color: white;
@@ -187,8 +188,11 @@ main h1{
 .ben h1{
   text-align: center;
   font-size: medium;
-  font-family: var(--fonttema2);
+  font-family: var(--fontupdate);
   margin-bottom: 9px;
+  font-weight:lighter;
+  font-size: larger;
+
 }
 @keyframes bnt {
   from{transform: translateY(0%);}
